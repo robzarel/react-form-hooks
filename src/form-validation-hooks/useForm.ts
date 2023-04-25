@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import type { FormEventHandler } from 'react';
-import type { DefaultField } from './types';
+import { useState } from "react";
+import type { FormEventHandler } from "react";
+import type { DefaultField } from "./types";
 
 function useForm<Field extends DefaultField, Response>(props: {
   fields: Field[];
@@ -16,7 +16,7 @@ function useForm<Field extends DefaultField, Response>(props: {
   const { fields, apiCall, onSuccess, onFailure } = props;
 
   const [isSending, setIsSending] = useState(false);
-  const [sendingError, setSendingError] = useState('');
+  const [sendingError, setSendingError] = useState("");
 
   const handleFormSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
@@ -26,7 +26,7 @@ function useForm<Field extends DefaultField, Response>(props: {
 
     if (isFormValid) {
       setIsSending(true);
-      setSendingError('');
+      setSendingError("");
 
       try {
         const response = await apiCall();
@@ -35,7 +35,7 @@ function useForm<Field extends DefaultField, Response>(props: {
         const msg =
           err instanceof Error
             ? err.message
-            : 'Что-то пошло не так, попробуйте ещё раз';
+            : "Что-то пошло не так, попробуйте ещё раз";
 
         setSendingError(msg);
         onFailure?.(msg);

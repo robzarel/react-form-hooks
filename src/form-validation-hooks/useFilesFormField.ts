@@ -1,10 +1,10 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState } from "react";
 
-import type { Validator, ValidationResult } from '../validators';
-import validateValue from '../validators';
-import type { DefaultField } from './types';
+import type { Validator, ValidationResult } from "../validators";
+import validateValue from "../validators";
+import type { DefaultField } from "./types";
 
-type FilesField = Omit<DefaultField, 'value' | 'error'> & {
+type FilesField = Omit<DefaultField, "value" | "error"> & {
   value: File[];
   error: ValidationResult[];
   handleChange: (files: File[]) => void;

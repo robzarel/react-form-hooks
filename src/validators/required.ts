@@ -1,6 +1,8 @@
-import type { GetValidator } from './index';
+import type { GetValidator } from "./index";
 
-const required: GetValidator<string, string> = (message = 'Обязательное поле') => {
+const required: GetValidator<string, string> = (
+  message = "Обязательное поле"
+) => {
   return async (value) => (value ? null : message);
 };
 

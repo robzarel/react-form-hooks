@@ -1,9 +1,9 @@
-import { useCallback, useState } from 'react';
-import type { ChangeEvent } from 'react';
+import { useCallback, useState } from "react";
+import type { ChangeEvent } from "react";
 
-import type { Validator, ValidationResult } from '../validators';
-import validateValue from '../validators';
-import type { DefaultField } from './types';
+import type { Validator, ValidationResult } from "../validators";
+import validateValue from "../validators";
+import type { DefaultField } from "./types";
 
 type TextField = DefaultField & {
   handleChange: (
@@ -15,7 +15,7 @@ type TextField = DefaultField & {
 function useTextFormField(
   id: string,
   validators: Validator<string>[],
-  init = ''
+  init = ""
 ): TextField {
   const [value, setValue] = useState(init);
   const [error, setError] = useState<ValidationResult>(null);
