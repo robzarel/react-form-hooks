@@ -26,7 +26,7 @@ type ValidationResult = string | null;
 
 ## Валидация
 
-Утилита `validate` поочерёдно запускает валидаторы над переданным значением.
+Утилита `validate` поочерёдно запускает валидаторы c переданным значением.
 
 ```typescript
 const validate: (
