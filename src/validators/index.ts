@@ -27,6 +27,7 @@ export { default as maxLength } from "./max-length";
 export { default as minLength } from "./min-length";
 export { default as fileMaxSize } from "./file-max-size";
 export { default as imageMaxResolution } from "./image-max-resolution";
+export { default as onlyLetters } from "./only-letters";
 
 export type { ValidationResult, Validator, GetValidator };
 export default validate;
