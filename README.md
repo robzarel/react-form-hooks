@@ -98,7 +98,7 @@ At the same time, **useForm** makes it possible to pass in **onSuccess** and **o
 
   import Styles from './index.css';
 
-  const name = useTextFormField('name', validators.name);
+  const name = useTextFormField('name', [required]);
 
   const form = useForm<RadioField, ApiResponse>({
     fields: [name],

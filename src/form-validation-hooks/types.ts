@@ -3,6 +3,7 @@ type DefaultField = {
   value: string;
   error: null | string;
   hasError: () => Promise<boolean>;
+  reset: () => void;
 };
 
 export { FilesField } from "./useFilesFormField";

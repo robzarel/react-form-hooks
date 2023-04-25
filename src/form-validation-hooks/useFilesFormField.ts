@@ -13,9 +13,10 @@ type FilesField = Omit<DefaultField, "value" | "error"> & {
 
 function useFilesFormField(
   id: string,
-  validators: Validator<File>[]
+  validators: Validator<File>[],
+  init: File[] = []
 ): FilesField {
-  const [value, setValue] = useState<File[]>([]);
+  const [value, setValue] = useState<File[]>(init);
   const [error, setError] = useState<ValidationResult[]>([]);
 
   const handleChange = useCallback(
@@ -45,10 +46,15 @@ function useFilesFormField(
     setError([]);
   }, []);
 
+  const reset = () => {
+    setValue(init);
+  };
+
   return {
     id,
     value,
     error,
+    reset,
     hasError,
     handleChange,
     clear,

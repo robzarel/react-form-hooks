@@ -36,10 +36,15 @@ function useCustomSelect(
     return !!err;
   }, [value, validators]);
 
+  const reset = () => {
+    setValue(init);
+  };
+
   return {
     id,
     value,
     error,
+    reset,
     hasError,
     handleChange,
     handleClose,
