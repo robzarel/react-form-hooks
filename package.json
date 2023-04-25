@@ -1,6 +1,6 @@
 {
   "name": "pure-validators",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "unversal simple validators",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
