@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robzarel/validators.git"
+    "url": "git+https://github.com/robzarel/react-form-hooks.git"
   },
-  "homepage": "https://github.com/robzarel/validators",
+  "homepage": "https://github.com/robzarel/react-form-hooks",
   "keywords": [
     "validation"
   ],
